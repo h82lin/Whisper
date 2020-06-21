@@ -1,0 +1,16 @@
+.search {
+	padding-left: 1rem;
+	display: flex;
+	align-items: center;
+	margin-left: 10rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	max-width: 40vw;
+	min-height: 30px;
+	border: 1.6px solid #DFDFDF;
+	height: 36px;
+	width: 1000px;
+	font-family: Arial;
+	font-size: 20px;
+	color: #808080;
+}

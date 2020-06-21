@@ -1,0 +1,9 @@
+.albumArt > img {
+    border-top:3px solid rgb(192, 153, 202);
+    border-right:3px solid rgb(192, 153, 202);
+    height: 99%;
+    width: 99%;
+    overflow: auto;
+    align-self: center;
+    justify-self: center
+}

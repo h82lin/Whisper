@@ -1,0 +1,53 @@
+body {
+	
+}
+
+.app {
+	display: grid;
+	grid-template-columns: 130px 0.6fr 6fr 2fr;
+	grid-template-rows: 1fr 6.8fr 2.3fr 130px;
+	height:100%;
+	width:100%;
+	position:fixed;
+	grid-template-areas:
+	"logo logo search search"
+	"navbar navbar discover recommended"
+	". . discover recommended"
+	"albumArt playback playback playback";
+	overflow: hidden;
+}
+
+.recommended {
+	grid-area: recommended;
+	background-color:rgba(247, 241, 241, 0.904);
+
+}
+
+.playback {
+	grid-area: playback;
+	border-top: 1px solid rgba(107, 40, 104, 0.349);	
+}
+
+.albumArt {
+	grid-area: albumArt;
+	border-right: 1px solid rgba(211, 186, 219, 0.281);
+}
+
+.logo {
+	padding-top: 10px;
+	grid-area: logo;
+	background-color:rgba(255, 255, 255);
+}
+
+.search {
+	grid-area: search;
+}
+
+.navbar {
+	grid-area: navbar;
+}
+
+.discover {
+	grid-area: discover;
+	background-color:rgba(247, 241, 241, 0.904);
+}

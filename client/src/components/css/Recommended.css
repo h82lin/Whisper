@@ -1,0 +1,22 @@
+.recommended {
+    display: grid;
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+	grid-gap: 1rem;
+	background-color: rgba(247, 241, 241, 0.904);
+	font-family: arial;
+}
+
+.recommended > div {
+	height: 200px;
+	background-color: rgba(134, 59, 134, 0.055);
+}
+
+.recommended > h1 {
+	font-weight: 700;
+	font-size: 1.4rem;
+	justify-self: center;
+	padding-top: 1.5rem;
+	padding-bottom: 1rem;
+}

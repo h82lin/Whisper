@@ -1,0 +1,67 @@
+.ta {
+	grid-area: ta;
+	align-self: center;
+	justify-self: end;
+}
+
+.progBar {
+	grid-area: progBar;
+	align-self: center;
+	justify-self: stretch;
+}
+
+.title {
+	font-weight: 700;
+	font-size: 1.3rem;
+	grid-area: title;
+	align-self: end;
+	justify-self: start;
+}
+
+.genre {
+	font-weight: 600;
+	font-size: 1rem;
+	grid-area: genre;
+	align-self: end;
+	justify-self: end;
+}
+
+.art {
+	grid-area: art;
+	border: 3px double #808080;
+	margin: 1rem;
+	width: 17rem;
+	min-width: 250px;
+	min-height: 250px;
+}
+
+.artist {
+	font-weight: 500;
+	font-size: 1rem;
+	grid-area: artist;
+	align-self: start;
+	justify-self: start;
+}
+
+.date {
+	font-weight: 400;
+	font-size: 0.9rem;
+	grid-area: date;
+	align-self: start;
+	justify-self: end;
+}
+
+.tracks {
+	display: grid;
+	grid-gap: 2rem;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	margin:0;
+	padding:0;
+	grid-template-areas: 
+	"ta title title genre art art"
+	"ta artist artist date art art"
+	"progBar progBar progBar progBar art art";
+}
+
+

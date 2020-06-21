@@ -1,0 +1,69 @@
+.navbar{
+	display:grid;
+	align-content: start;
+	overflow: auto;
+}
+
+.navbar > div {
+	background-color:rgba(247, 241, 241, 0.904);
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	overflow: auto;
+	height: 55px;
+	padding-left: 4rem;
+	align-self: center;
+	color: #333;
+	font-family: Arial;
+}
+
+.navch {
+	background-color:rgba(255, 255, 255);
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	overflow: auto;
+	height: 55px;
+	padding-left: 4rem;
+	align-self: center;
+	color: #333;
+	font-family: Arial;
+}
+.navch:hover {
+	background-color: rgb(247, 241, 241);
+}
+
+.navch1 {
+	background-color:rgba(255, 255, 255);
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	overflow: auto;
+	height: 55px;
+	padding-left: 4rem;
+	align-self: center;
+	color: #333;
+	font-family: Arial;
+	font-weight: 600;
+}
+.navch1:hover {
+	background-color: rgb(247, 241, 241);
+}
+
+
+.navch2 {
+	background-color:rgba(255, 255, 255);
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	overflow: auto;
+	height: 55px;
+	padding-left: 4rem;
+	align-self: center;
+	color: #333;
+	font-family: Arial;
+	border-bottom: 1px solid #d9d9d9;;
+}
+.navch2:hover {
+	background-color: rgb(247, 241, 241);
+}
