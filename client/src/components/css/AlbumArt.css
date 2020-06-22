@@ -1,9 +1,15 @@
 .albumArt > img {
-    border-top:3px solid rgb(192, 153, 202);
-    border-right:3px solid rgb(192, 153, 202);
-    height: 99%;
-    width: 99%;
+    width: 100%;
+    height: width; 
     overflow: auto;
-    align-self: center;
-    justify-self: center
+    align-self: end;
+    justify-self: end;
+    border-top: 0.5px solid rgb(114, 114, 114);
+    border-right: 0.5px solid rgb(95, 95, 95);
+}
+
+.albumArt {
+    display:grid;
+    height: 100%;
+    width: 100%;
 }

@@ -1,55 +1,73 @@
 .titler {
-	font-weight: 700;
-	font-size: 1.3rem;
     grid-area: titler;
-    margin-left: 20%;
-    margin-top: 30%;
-    align-self: end;
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: grid;
+    margin-bottom: -5%;
+    z-index: 1; 
 }
 
-.genrer {
-	font-weight: 600;
-	font-size: 1rem;
-    margin-left: 20%;
-    grid-area: genrer;
+.titler > h1{
+	font-weight: 700;
+	font-size: 1.3rem;
+	align-self: start;
+    justify-self: start;
+    padding-left: 10%;
+}
+
+.titler  :hover{
+	text-decoration: underline;
+	cursor: pointer;
 }
 
 .artr {
-    grid-area: 1/1/6/6;
-	border: 3px double #808080;
-    margin: 1rem;
-    min-width: 140px;
-	min-height: 140px;
+	display: grid;
+	grid-area: artr;
+	height: 100%;
+    width: 100%;
+}
+
+.artr > img	{
+	height: 100%;
+	width: height;
+	align-self: center;
+    justify-self: center;
+	border: 0.5px solid rgb(49, 49, 49);
+}
+
+.artr >  :hover{
+	cursor: pointer;
 }
 
 .artistr {
-	font-weight: 500;
-	font-size: 1rem;
-    margin-left: 20%;
     grid-area: artistr;
-    
+    margin-top: -3%;
+    height: 100%;
+    width: 100%;
+    color: white;
+    display: grid;
+    z-index: 1;
 }
 
-.dater {
-	font-weight: 400;
-	font-size: 0.9rem;
-    margin-left: 20%;
-    grid-area: dater;  
+.artistr > h1{
+	font-weight: 500;
+	font-size: 1rem;
+	align-self: end;
+    justify-self: end;
+    padding-right: 10%;
+}
+
+.artistr :hover{
+	text-decoration: underline;
+	cursor: pointer;
 }
 
 .recons {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(4, 1fr);
-	margin-left:20%;
-    margin-right:5%;
-	
-	grid-template-areas: 
-	"titler . "
-    "artistr ."
-    "genrer ."
-    "dater .";
+	grid-template-rows: 1fr 20fr 1fr;
+    grid-template-areas:"titler"
+    "artr"
+    "artistr";
     font-family: arial;
 }
-
-

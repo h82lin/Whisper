@@ -8,7 +8,7 @@ import "./css/Tracks.css"
 class Following extends Component {
 
 	render() {
-
+		
 		const TrackLi = trackRaw.map(trackData => <Tracks 
 			key={trackData.id} 
 			ta={trackData.ta} 

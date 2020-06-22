@@ -1,191 +1,95 @@
-.playback{
-    background-color: #EFE6F1;
+.playback2{
+    display: grid;
+    background-color: rgb(24, 24, 24);
+    grid-template-columns: 2fr 7fr;
+    grid-template-areas: "songInfo audioDiv";   
+    align-self: center;
+    justify-self: center;
+    height: 100%;
+    width: 100%
 }
 
-.songInfo{
-    float:left;
-}
 
 .audioDiv{
-     float:right;
-     width:90%;
-     height: 100%;
-}
-
-.audioPlayer{
-    height:100%;
-}
-
-.title{
-    margin-left:7px;
-}
-
-.artist{
-    margin-left:7px;
-}
-.date{
-    margin-left:7px;
-}
-
-
-/*.playback {
-    height: 100%;
-    background-color: rgba(134, 59, 134, 0.055);
-    margin-right: 5%;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas:
-    "title audioPlayer audioPlayer audioPlayer audioPlayer"
-    "artist audioPlayer audioPlayer audioPlayer audioPlayer"
-    "date audioPlayer audioPlayer audioPlayer audioPlayer";
-    font-family: Arial;
-    background-color: rgba(180, 138, 190, 0.219);
-}
-
-
-.audioPlayer{
-     grid-area: audioPlayer;
-}
-.title {
-    font-weight: 600;
-    font-size: 0.9rem;
-    grid-area: title;
-    justify-self: start;
-    align-self: end;
-    padding-left: 2rem;
-    color: #333;
-}
-
-.artist{
-    font-weight: 400;
-    font-size: 0.7rem;
-    grid-area: artist;
-    justify-self: start;
-    align-self: center;
-    padding-left: 2rem;
-    color: rgba(51, 51, 51, 0.87);
-}
-
-.date {
-    font-weight: 400;
-    font-size: 0.6rem;
-    grid-area: date;
-    justify-self: start;
-    align-self: start;
-    padding-left: 2rem;
-    color: rgba(51, 51, 51, 0.767);
-}
-*/
-
-/*
-.box {
-    display: grid;
-    overflow: auto;
-    height: 100%;
+    grid-area: audioDiv;
     width: 100%;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas:
-    "titlea "
-    "artista "
-    "datea ";
-    font-family: Arial;
-    background-color: rgba(180, 138, 190, 0.219);
-}
-
-.play {
-    grid-area: play;
-    justify-self: center;
-    align-self: center;
-    font-size: 3rem;
-    color: rgba(51, 51, 51, 0.096);
-}
-
-.pbar {
-    grid-area: 3/3/4/15;
-    justify-self: center;
-    align-self: center;
-}
-
-.prev {
-    grid-area: prev;
-    justify-self: end;
-    align-self: center;
-    font-size: 2.5rem;
-    color: rgba(51, 51, 51, 0.842);
-    padding-left: 5rem;
-}
-
-.shuffle {
-    grid-area: shuffle;
-    justify-self: center;
-    align-self: center;
-    font-size: 1.3rem;
-    color: rgba(51, 51, 51, 0.842);
-    padding-left: 5rem;
-}
-
-.next {
-    grid-area: next;
-    justify-self: start;
-    align-self: center;
-    font-size: 2.5rem;
-    color: rgba(51, 51, 51, 0.842);
-    padding-right: 5rem;
-}
-
-.repeat {
-    grid-area: repeat;
-    justify-self: center;
-    align-self: center;
-    font-size: 1rem;
-    color: rgba(51, 51, 51, 0.842);
-    padding-right: 5rem;
-}
-
-.volume {
-    grid-area: volume;
-    justify-self: center;
-    align-self: center;
-    font-size: 2rem;
-    color: rgba(51, 51, 51, 0.842);
-}
-
-.heart {
-    grid-area: heart;
-    justify-self: start;
-    align-self: end;
-    font-size: 1.4rem;
-    color: rgba(51, 51, 51, 0.842);
-    padding-left: 1.2rem;
-}
-
-.titlea {
-	font-weight: 600;
-	font-size: 0.9rem;
-    grid-area: titlea;
-    justify-self: start;
-    align-self: end;
-    padding-left: 2rem;
-    color: #333;
-}
-
-.datea {
-	font-weight: 400;
-	font-size: 0.6rem;
-    grid-area: datea;
-    justify-self: start;
-    align-self: start;
-    padding-left: 2rem;
-    color: rgba(51, 51, 51, 0.767);
+    height: 100%;
 }
 
 .artista {
-	font-weight: 400;
-	font-size: 0.7rem;
     grid-area: artista;
-    justify-self: start;
+    justify-self: center;
     align-self: center;
-    padding-left: 2rem;
-    color: rgba(51, 51, 51, 0.87);
-}*/
+    display: grid;
+}
+
+.artista > h1 {
+    font-size: 0.8rem;
+    color: rgb(141, 141, 141);
+    justify-self: start;
+    align-self: start;
+    font-weight: 80;
+    font-family: arial;
+    margin-left: 15%;
+}
+
+.titlea {
+
+    grid-area: titlea;
+    justify-self: center;
+    align-self: center;
+    display: grid;
+}
+
+.titlea > h1 {
+    font-size: 1rem;
+    color: white;
+    justify-self: start;
+    align-self: end;
+    font-weight: 400;
+    font-family: arial;
+    margin-left: 15%;
+    margin-bottom: -2%;
+}
+
+.songInfo {
+    display: grid;
+    grid-area: songInfo;
+    height: 100%;
+    width: 100%;
+    grid-template-areas: "titlea"
+    "artista";
+}
+
+.songInfo > div {
+    display:grid;
+    height: 100%;
+    width: 100%;
+    font: arial;
+    color: white;
+}
+
+.audioPlayer{
+    background-color: rgb(24, 24, 24);
+    font-family: arial;
+    height: 100%;
+}
+
+.rhap_play-pause-button {
+    color:rgb(221, 221, 221);
+}
+
+.rhap_button-clear {
+    color:rgb(221, 221, 221);
+}
+
+.rhap_time  {
+    color: rgb(221, 221, 221);
+    font-size: 0.7rem;
+}
+
+.rhap_progress-indicator {
+    color: transparent;
+    background-color: transparent;
+    box-shadow: none;
+}

@@ -5,10 +5,10 @@ import "./css/Search.css"
 class Search extends Component {
 	render() {
 		return(
-			<div>
-			<form>
-				<input className="search" type="text" placeholder="Search" />	
-			</form>
+			<div className="search">
+				<form>
+					<input type="text" placeholder="Search" />	
+				</form>
 			</div>
 		)
 	}

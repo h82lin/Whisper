@@ -1,14 +1,13 @@
 const CurrentRaw = [
 	{
-		id:"1",
-		ta: "0.0",
-		pb: "|||||____|||__||_||_|_",
-		artist: "NOTD & Astrid S",
-		art: "https://coverartarchive.org/release-group/1f281ec1-d41b-4623-8582-27f8bd686418/front.jpg",
+		id: 10,
+		pb: "gs://group7-df874.appspot.com/NOTD - I Don't Know Why (ft. Astrid S).mp3/NOTD - I Don't Know Why (ft. Astrid S).mp3",
+		artist: "NOTD feat. Astrid S",
+		art: "gs://group7-df874.appspot.com/NOTD - I Don't Know Why (ft. Astrid S).mp3/Folder.jpg",
 		title: "I Don't Know Why",
 		genre: "Pop",
-		date: "2020-5-08"
-	}
+		date: "--"
+	},
 ]
 
 export default CurrentRaw

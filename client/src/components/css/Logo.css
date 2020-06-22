@@ -2,18 +2,20 @@
 
 .logo1 {
 	display: flex;
-	align-items: center;
+	align-items: start;
 	justify-content: center;
-	color: black;
+	color: white;
 	font-size: 2.5rem;
 	font-weight: 600;
 	font-family: 'Shadows Into Light', cursive;
 	overflow: hidden;
 	min-width: 180px;
 	min-height: 20px;
+	height: 100%;
+	width: 100%;
 }
 
 .logo1:hover {
-	color: white;
-	transition: color 5s;
+	color: rgb(0, 0, 0);
+	transition: color 3s;
 }

@@ -35,7 +35,7 @@ contract UploadMusic {
 		return result;
 	}
 	//mapping
-	// function musicOwner(uint _id) public view returns(address) {
+	// function musicOwner(uint _id) public view uint _id)uint _id)returns(address) {
 	// 	return idToOwner[_id];
 	// }
 	// function musicCount(address _address) public view returns(uint) {
@@ -43,6 +43,9 @@ contract UploadMusic {
 	// }
 
 	//get
+	//function getMusicLen() public view returns(uint) {
+	//	return musicArray.length;
+	//}
 	function getTitle(uint _id) public view returns(string memory) {
 		return musicArray[_id].title;
 	}

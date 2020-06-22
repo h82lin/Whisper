@@ -1,4 +1,52 @@
 .upload {
     font-size: 1rem;
-    color: #333;
+    color: rgb(168, 168, 168);
+}
+
+.upload :hover{
+    color: rgb(255, 255, 255);
+}
+
+.uploadForm {
+    align-self: center;
+    align-content: center;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(7, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+.uploadForm > div {
+    display: grid;
+    align-self: center;
+    align-content: center;
+    height: 80%;
+    width: 90%;
+    font: arial;
+    color: white;
+    font-size: 1.5rem;
+    grid-template-columns: 1fr 5fr;
+}
+
+.uploadForm > div > input {
+    align-self: center;
+    align-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.uploadForm > div > label {
+    align-self: center;
+    align-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.uploadForm >button {
+    align-self: start;
+    align-content: center;
+    height: 30%;
+    width: 50%;
 }

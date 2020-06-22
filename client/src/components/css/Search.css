@@ -1,16 +1,25 @@
 .search {
-	padding-left: 1rem;
-	display: flex;
-	align-items: center;
-	margin-left: 10rem;
-	margin-top: 1rem;
-	margin-bottom: 1rem;
-	max-width: 40vw;
-	min-height: 30px;
+	display: grid;
+	height: 100%;
+	width: 100%;
+}
+
+.search > form {
+	display: grid;
+	height: 100%;
+	width: 100%;
+}
+
+.search > form > input {
+	align-self: center;
+	justify-self: start;
 	border: 1.6px solid #DFDFDF;
-	height: 36px;
-	width: 1000px;
+	height: 40%;
+	width: 50%;
 	font-family: Arial;
 	font-size: 20px;
 	color: #808080;
+	border-radius: 25px;
+	margin-left: 15%;
+	padding-left: 3%;
 }

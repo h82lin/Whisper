@@ -37,7 +37,7 @@ class Upload extends Component {
         this.setState({
         title: event.target.value
       })
-    };
+    }
 
     handleArtistChange = event => {
         this.setState({
@@ -120,8 +120,8 @@ class Upload extends Component {
     render() {
         const { title, artist, genre, date, albumArt, musicFile} = this.state
         return(
-			<div className="discover">
-                <form onSubmit={this.handleSubmit}>
+			<div className="mid">
+                <form onSubmit={this.handleSubmit} className="uploadForm">
                     <div>
                         <label>Title: </label>
                         <input

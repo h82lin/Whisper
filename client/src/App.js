@@ -65,7 +65,7 @@ class App extends Component {
           <PlayBack />
           <Recommended />
           <Switch>
-            <Route path="/" exact component={Discover} />
+            <Route path="/" exact render={(routeProps) => (<Discover {...routeProps} web3={this.state.web3} accounts={this.state.accounts} contract={this.state.contract} />)}/> />
             <Route path="/Page2" component={Page2} />
             <Route path="/Trending" component={Trending} />
             <Route path="/Following" component={Following} />

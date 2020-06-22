@@ -1,37 +1,27 @@
 .discover {
-	display: grid;
 	height: 100%;
 	width: 100%;
-	padding-left: 5%;
-	padding-left: 5%;
 	overflow: auto;
-	grid-gap: 4rem;
 	font-family: arial;
+	color: white;
+
+	display: grid;
 }
 
 .discover > h1 {
+	margin-bottom: -3%;
 	display: grid;
-	height: 0px;
 	font-weight: 800;
 	font-size: 3rem;
-	padding-left: 3%;
-	padding-top: 1%;
-	padding-bottom: 1rem;
+	margin-left: 10%;
 }
 
 .discover > div {
-	height: 280px;
-	background-color: rgba(134, 59, 134, 0.055);
-	margin-right: 5%;
-}
-
-.discover > h1 > h2 {
-	height: 0px;
-	font-weight: 100;
-	font-size: 1rem;
-	padding-right: 10%;
-	margin-top: -4%;
-	justify-self: end;
+	height: 350px;
+	margin-top: 8%;
+	margin-bottom: 8%;
+	padding-left: 5%;
+	margin-left: 1%;
 }
 
 

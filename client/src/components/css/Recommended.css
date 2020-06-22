@@ -3,20 +3,26 @@
 	height: 100%;
 	width: 100%;
 	overflow: auto;
-	grid-gap: 1rem;
-	background-color: rgba(247, 241, 241, 0.904);
+	background-color: rgb(0, 0, 0);
 	font-family: arial;
+	grid-gap: 3rem;
 }
 
 .recommended > div {
-	height: 200px;
-	background-color: rgba(134, 59, 134, 0.055);
+	background-color: rgba(88, 11, 88, 0.055);
+	width: 250px;
+	height: 250px;
+	align-self: center;
+	justify-self: center;
+
 }
 
 .recommended > h1 {
-	font-weight: 700;
-	font-size: 1.4rem;
+	font-weight: 1000;
+	font-size: 1.5rem;
+	padding-top: 1rem;
 	justify-self: center;
-	padding-top: 1.5rem;
-	padding-bottom: 1rem;
+	align-self: center;
+	color: white;
 }
+
