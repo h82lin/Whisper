@@ -25,13 +25,13 @@ class Discover extends Component {
 
 			  componentDidMount = async () => {
 					const {accounts, contract} = this.state
-				  this.setState({title: await contract.methods.getTitle(10).call({ from: accounts[0] })})
-					this.setState({artist: await contract.methods.getArtist(10).call({ from: accounts[0] })})
-					this.setState({genre: await contract.methods.getGenre(10).call({ from: accounts[0] })})
-					this.setState({date: await contract.methods.getPublishDate(10).call({ from: accounts[0] })})
-					this.setState({musicURL: await contract.methods.getMusicURL(10).call({ from: accounts[0] })})
-          this.setState({albumArtURL: await contract.methods.getAlbumArt(10).call({ from: accounts[0] })})
-
+				  this.setState({title: await contract.methods.getTitle(0).call({ from: accounts[0] })})
+					this.setState({artist: await contract.methods.getArtist(0).call({ from: accounts[0] })})
+					this.setState({genre: await contract.methods.getGenre(0).call({ from: accounts[0] })})
+					this.setState({date: await contract.methods.getPublishDate(0).call({ from: accounts[0] })})
+					this.setState({musicURL: await contract.methods.getMusicURL(0).call({ from: accounts[0] })})
+          this.setState({albumArtURL: await contract.methods.getAlbumArt(0).call({ from: accounts[0] })})
+					this.setState({albumArtURL: await contract.methods.getLength().call({ from: accounts[0] })})
 				}
 
 /*

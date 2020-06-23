@@ -33,12 +33,12 @@ class Upload extends Component {
         this.sendToBlockchain = this.sendToBlockchain.bind(this);
     }
 
+
     handleTitleChange = event => {
         this.setState({
         title: event.target.value
-      })
+        })
     }
-
     handleArtistChange = event => {
         this.setState({
             artist: event.target.value

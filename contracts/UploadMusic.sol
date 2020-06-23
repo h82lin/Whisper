@@ -43,9 +43,9 @@ contract UploadMusic {
 	// }
 
 	//get
-	//function getMusicLen() public view returns(uint) {
-	//	return musicArray.length;
-	//}
+	function getLength() public view returns(uint) {
+		return musicArray.length;
+	}
 	function getTitle(uint _id) public view returns(string memory) {
 		return musicArray[_id].title;
 	}
