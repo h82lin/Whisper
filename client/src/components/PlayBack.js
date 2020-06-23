@@ -1,28 +1,36 @@
-import React from 'react';
+import AudioPlayer from 'react-h5-audio-player';
+import React, { Component } from "react"
 
-import Currents from "./playback/Currents.js"
-import CurrentRaw from "./playback/CurrentRaw.js"
-
+import 'react-h5-audio-player/lib/styles.css';
 import "./css/Playback.css"
 import "../App.css"
 
-function PlayBack() {
-    
-    const Currt = CurrentRaw.map(currentData => <Currents 
-		key={currentData.id} 
-		pb={currentData.pb}
-		artist={currentData.artist}
-		title={currentData.title}
-		genre={currentData.genre}
-		date={currentData.date}
-		 />)
-    console.log(Currt.pb)
-  return (
+class PlayBack extends Component {
 
-    <div className="playback">            
-      {Currt} 
-    </div>
-  );
+    render() {
+      console.log(this.props.artistFromApp)
+      return (
+        <div className="playback">            
+		  	  <div className="playback2">
+		  	   <div className="songInfo">
+		  		    <div className="artista">
+		  		  	  <h1>{this.props.artistFromApp}</h1>
+		  		  	</div>
+		  	  	  <div className="titlea">
+		  	  		  <h1>{this.props.titleFromApp}</h1>
+		  	  	  </div>
+		  	  	</div>
+		    	  <div className="audioDiv">
+             <AudioPlayer className="audioPlayer"
+             progressUpdateInterval={50} 
+             src={this.props.musicFromApp}
+             layout="stacked-reverse"
+             />
+            </div>
+		      </div>    
+        </div>
+      );
+   }
 }
 
 export default PlayBack;

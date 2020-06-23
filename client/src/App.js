@@ -8,7 +8,6 @@ import Search from "./components/Search.js"
 
 import Navbar from "./components/Navbar.js"
 
-import AlbumArt from "./components/AlbumArt.js"
 import PlayBack from "./components/PlayBack.js"
 import Recommended from "./components/Recommended.js"
 import Page2 from "./components/Page2.js"
@@ -18,10 +17,43 @@ import Following from "./components/Following.js"
 import Library from "./components/Library.js"
 import Uploads from "./components/Uploads.js"
 import Upload from "./components/Upload.js"
+import AlbumArtHolder from "./components/albumArtplaceholder.jpg"
 
 import "./App.css";
+import "./components/css/AlbumArt.css"
 
 class App extends Component {
+  constructor(props) {
+		super(props);
+		this.state = {
+      thisTitle: '3',
+      thisArtist: '3',
+      thisGenre: '3',
+      thisArt: AlbumArtHolder,
+      thisMusic: '3',
+      thisDate: '3',
+		}
+  }
+  
+  callbackTitle = (dataFromChild) => {
+    this.setState({ thisTitle: dataFromChild });
+  }
+  callbackArtist = (dataFromChild) => {
+    this.setState({ thisArtist: dataFromChild });
+  }
+  callbackGenre = (dataFromChild) => {
+    this.setState({ thisGenre: dataFromChild });
+  }
+  callbackArt = (dataFromChild) => {
+    this.setState({ thisArt: dataFromChild });
+  }
+  callbackMusic = (dataFromChild) => {
+    this.setState({ thisMusic: dataFromChild });
+  }
+  callbackDate = (dataFromChild) => {
+    this.setState({ thisDate: dataFromChild });
+  }
+
   state = { web3: null, accounts: null, contract: null };
 
   componentDidMount = async () => {
@@ -61,17 +93,31 @@ class App extends Component {
           <Logo />
           <Search />
           <Navbar />
-          <AlbumArt />
-          <PlayBack />
+          <div className="albumArt">
+                <img src={this.state.thisArt} alt="Album Art" />
+          </div>
+          <PlayBack
+          artistFromApp={this.state.thisArtist}
+          titleFromApp={this.state.thisTitle}
+          musicFromApp={this.state.thisMusic}
+          />
           <Recommended />
           <Switch>
-            <Route path="/" exact render={(routeProps) => (<Discover {...routeProps} web3={this.state.web3} accounts={this.state.accounts} contract={this.state.contract} />)}/> />
+            <Route path="/" exact render={(routeProps) => (<Discover 
+            callTitleFromParent={this.callbackTitle}
+            callArtistFromParent={this.callbackArtist}
+            callGenreFromParent={this.callbackGenre}
+            callArtFromParent={this.callbackArt}
+            callMusicFromParent={this.callbackMusic}
+            callDateFromParent={this.callbackDate}
+            {...routeProps} web3={this.state.web3} accounts={this.state.accounts} contract={this.state.contract} />)}
+            />
             <Route path="/Page2" component={Page2} />
             <Route path="/Trending" component={Trending} />
             <Route path="/Following" component={Following} />
             <Route path="/Library" component={Library} />
             <Route path="/Uploads" exact component={Uploads} />
-            <Route path="/Uploads/Upload" render={(routeProps) => (<Upload {...routeProps} web3={this.state.web3} accounts={this.state.accounts} contract={this.state.contract} />)}/> />
+            <Route path="/Uploads/Upload" render={(routeProps) => (<Upload {...routeProps} web3={this.state.web3} accounts={this.state.accounts} contract={this.state.contract} />)}/>
           </Switch>
       </div>
     </Router>

@@ -2,14 +2,18 @@
     width: 100%;
     height: width; 
     overflow: auto;
-    align-self: end;
-    justify-self: end;
+    align-self: center;
+    justify-self: center;
     border-top: 0.5px solid rgb(114, 114, 114);
     border-right: 0.5px solid rgb(95, 95, 95);
 }
 
 .albumArt {
+    display: grid;
+    margin-top: -60%;
     display:grid;
     height: 100%;
     width: 100%;
+    align-self: center;
+    justify-self: center;
 }

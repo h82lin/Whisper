@@ -27,6 +27,7 @@ class Tracks extends Component {
 
 
 	render() {
+		console.log(this.state.playSong)
 		return(
 				<div className="tracks">
 					<div className="ta">
