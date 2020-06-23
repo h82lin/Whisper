@@ -32,7 +32,7 @@ class Discover extends Component {
 			this.setState({date: await contract.methods.getPublishDate(0).call({ from: accounts[0] })})
 			this.setState({musicURL: await contract.methods.getMusicURL(0).call({ from: accounts[0] })})
 			this.setState({albumArtURL: await contract.methods.getAlbumArt(0).call({ from: accounts[0] })})
-			this.setState({length: await contract.methods.getLength().call({ from: accounts[0] })})
+			//this.setState({length: await contract.methods.getLength().call({ from: accounts[0] })})
 		}
 	
 	imageClick = () => {

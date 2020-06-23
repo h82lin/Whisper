@@ -8,7 +8,6 @@ import "../App.css"
 class PlayBack extends Component {
 
     render() {
-      console.log(this.props.artistFromApp)
       return (
         <div className="playback">            
 		  	  <div className="playback2">

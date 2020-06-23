@@ -38,6 +38,9 @@ class App extends Component {
   callbackTitle = (dataFromChild) => {
     this.setState({ thisTitle: dataFromChild });
   }
+  allbackTitle = (dataFromChild) => {
+    this.setState({ thisTitle: dataFromChild });
+  }
   callbackArtist = (dataFromChild) => {
     this.setState({ thisArtist: dataFromChild });
   }
@@ -87,6 +90,7 @@ class App extends Component {
     if (!this.state.web3) {
       return <div>Loading Web3, accounts, and contract...</div>;
     }
+
     return (
     <Router>
       <div className="app">
@@ -101,7 +105,12 @@ class App extends Component {
           titleFromApp={this.state.thisTitle}
           musicFromApp={this.state.thisMusic}
           />
-          <Recommended />
+          <Recommended 
+          allTitleFromParent={this.allbackTitle}
+          callArtistFromParent={this.callbackArtist}
+          callArtFromParent={this.callbackArt}
+          callMusicFromParent={this.callbackMusic}
+          />
           <Switch>
             <Route path="/" exact render={(routeProps) => (<Discover 
             callTitleFromParent={this.callbackTitle}
