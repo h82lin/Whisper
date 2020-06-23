@@ -24,7 +24,6 @@ class Discover extends Component {
 			}
 		}
 
-<<<<<<< HEAD
 	componentDidMount = async () => {
 			const {accounts, contract} = this.state
 			this.setState({title: await contract.methods.getTitle(0).call({ from: accounts[0] })})
@@ -44,18 +43,6 @@ class Discover extends Component {
 		this.props.callMusicFromParent(this.state.musicURL);
 		this.props.callArtFromParent(this.state.albumArtURL);
 	}
-=======
-			  componentDidMount = async () => {
-					const {accounts, contract} = this.state
-				  this.setState({title: await contract.methods.getTitle(0).call({ from: accounts[0] })})
-					this.setState({artist: await contract.methods.getArtist(0).call({ from: accounts[0] })})
-					this.setState({genre: await contract.methods.getGenre(0).call({ from: accounts[0] })})
-					this.setState({date: await contract.methods.getPublishDate(0).call({ from: accounts[0] })})
-					this.setState({musicURL: await contract.methods.getMusicURL(0).call({ from: accounts[0] })})
-          this.setState({albumArtURL: await contract.methods.getAlbumArt(0).call({ from: accounts[0] })})
-					this.setState({albumArtURL: await contract.methods.getLength().call({ from: accounts[0] })})
-				}
->>>>>>> ac5f0f989d8a332f3ea149e0f07f8ca7fa0e7b94
 
 /*
 	const TrackLi = trackRaw.map(trackData => <Tracks
