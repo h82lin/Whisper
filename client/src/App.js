@@ -13,6 +13,9 @@ import Uploads from "./components/Uploads.js"
 import Upload from "./components/Upload.js"
 import AlbumArtHolder from "./components/albumArtplaceholder.jpg"
 import SearchResult from './components/SearchResult.js'
+import Login from "./components/Login.js"
+import SignUp from "./components/SignUp.js"
+import Library from "./components/Library.js"
 import "./App.css";
 import "./components/css/AlbumArt.css"
 import "./components/css/Search.css"
@@ -28,9 +31,10 @@ class App extends Component {
       thisArt: AlbumArtHolder,
       thisMusic: '',
       thisDate: '2020-06-24',
+      loginAccount: undefined
 		}
   }
-  
+
   callbackTitle = (dataFromChild) => {
     this.setState({ thisTitle: dataFromChild });
   }
@@ -55,7 +59,7 @@ class App extends Component {
   updateSearch(event) {
     this.setState({searchKey: event.target.value})
   }
-  
+
   //web3 stuff
   state = { web3: null, accounts: null, contract: null };
   componentDidMount = async () => {
@@ -76,6 +80,10 @@ class App extends Component {
       console.error(error);
     }
   };
+  setLoginAccount(account) {
+    this.setState({ loginAccount: account})
+  }
+
 
   render() {
     if (!this.state.web3) {
@@ -88,14 +96,15 @@ class App extends Component {
           <Logo />
           <div className="search">
 				    <form>
-					    <input 
-					    type="text" 
-					    placeholder="Search" 
+					    <input
+					    type="text"
+					    placeholder="Search"
 					    value={this.state.search}
 					    onChange={this.updateSearch.bind(this)}
-					    />	
+					    />
 				    </form>
 			    </div>
+          <Login address = {this.state.loginAccount}/>
           <Navbar />
           <div className="albumArt">
                 <img src={this.state.thisArt} alt="Album Art" />
@@ -105,7 +114,7 @@ class App extends Component {
           titleFromApp={this.state.thisTitle}
           musicFromApp={this.state.thisMusic}
           />
-          <Recommended 
+          <Recommended
           callTitleFromParent={this.callbackTitle}
           callArtistFromParent={this.callbackArtist}
           callArtFromParent={this.callbackArt}
@@ -138,7 +147,9 @@ class App extends Component {
             <Route path="/Listen Later" component={Trending} />
             <Route path="/Favourites" component={Trending} />
             <Route path="/Uploads" exact component={Uploads} />
-            <Route path="/Uploads/Upload" render={(routeProps) => (<Upload {...routeProps} web3={this.state.web3} accounts={this.state.accounts} contract={this.state.contract} />)}/>
+            <Route path="/Uploads/Upload" render={(routeProps) => (<Upload {...routeProps} web3={this.state.web3} accounts={this.state.accounts} contract={this.state.contract} address = {this.state.loginAccount} />)}/>
+            <Route path="/SignUp"  render={(routeProps) => (<SignUp {...routeProps} web3={this.state.web3} accounts={this.state.accounts} contract={this.state.contract} getAccount={ acc => this.setLoginAccount(acc)} />)}/>
+            <Route path="/Library" render={(routeProps) => (<Library {...routeProps} web3={this.state.web3} accounts={this.state.accounts} contract={this.state.contract} address = {this.state.loginAccount} />)}/>
           </Switch>
       </div>
     </Router>

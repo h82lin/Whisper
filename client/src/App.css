@@ -1,15 +1,15 @@
 .app {
 	display: grid;
-	grid-template-columns: 130px 0.6fr 6.5fr 1.7fr;
+	grid-template-columns: 130px 0.6fr 6.5fr 1.5fr 1.7fr;
 	grid-template-rows: 1fr 6.8fr 2.3fr 85px;
 	height:100%;
 	width:100%;
 	position:fixed;
 	grid-template-areas:
-	"logo logo search recommended"
-	"navbar navbar mid recommended"
-	"navbar navbar mid recommended"
-	"albumArt albumArt playback playback";
+	"logo logo search login recommended"
+	"navbar navbar mid mid recommended"
+	"navbar navbar mid mid recommended"
+	"albumArt albumArt playback playback playback";
 	overflow: hidden;
 	background-color: black;
 	color: white;
@@ -21,6 +21,10 @@
 	height:100%;
 	width:100%;
 
+}
+
+.login{
+	grid-area: login;
 }
 
 .playback {
@@ -71,13 +75,13 @@
 ::-webkit-scrollbar {
 	width: 17px;
   }
-   
+
   /* Handle */
   ::-webkit-scrollbar-thumb {
-	background:rgb(63, 63, 63); 
+	background:rgb(63, 63, 63);
   }
-  
+
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-	background: #636363; 
+	background: #636363;
   }

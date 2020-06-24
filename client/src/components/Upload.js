@@ -109,12 +109,12 @@ class Upload extends Component {
                     });
             });
 
-        alert("File Uploaded")
+        alert("Plase confirm your transaction with Metamask.")
     }
 
     sendToBlockchain = async () => {
         const { accounts, contract } = this.state;
-        await contract.methods.uploadMusic(this.state.title, this.state.artist, this.state.genre, this.state.date, this.state.musicURL, this.state.albumArtURL).send({ from: accounts[0] });
+        await contract.methods.uploadMusic(this.state.title, this.state.artist, this.state.genre, this.state.date, this.state.musicURL, this.state.albumArtURL).send({ from: this.props.address });
     }
 
     render() {
@@ -136,9 +136,9 @@ class Upload extends Component {
                         <label>Artist: </label>
                         <input
                         type='text'
-                        value={artist}
-                        onChange={this.handleArtistChange}
-                        placeholder="Whisper"
+                        value={this.props.address}
+                      //  onChange={this.handleArtistChange}
+                        placeholder="Account ID"
                         />
                     </div>
                     <div>
