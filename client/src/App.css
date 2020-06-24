@@ -1,6 +1,6 @@
 .app {
 	display: grid;
-	grid-template-columns: 130px 0.6fr 6.5fr 1.5fr;
+	grid-template-columns: 130px 0.6fr 6.5fr 1.7fr;
 	grid-template-rows: 1fr 6.8fr 2.3fr 85px;
 	height:100%;
 	width:100%;

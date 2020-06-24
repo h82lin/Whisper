@@ -7,12 +7,12 @@ import "./css/Uploads.css"
 
 class Uploads extends Component {
     render() {
-        const linkStyle = {color:"transparent"}
+        const linkStyle = {textDecoration:"transparent"}
         return(
 			<div className="mid">
 				<div className="uploads">
                     <h1>Uploads
-                        <Link className="upload" to="/Uploads/Upload">
+                        <Link style={linkStyle} className="upload" to="/Uploads/Upload">
                             <h2>+ Upload</h2>
 				        </Link>
                     </h1>

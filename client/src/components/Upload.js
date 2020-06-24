@@ -118,7 +118,7 @@ class Upload extends Component {
     }
 
     render() {
-        const { title, artist, genre, date, albumArt, musicFile} = this.state
+        const { title, artist, genre, date} = this.state
         return(
 			<div className="mid">
                 <form onSubmit={this.handleSubmit} className="uploadForm">
