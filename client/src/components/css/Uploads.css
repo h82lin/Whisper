@@ -59,6 +59,7 @@
     color: rgb(189, 189, 189);
     border-radius: 25px;
     padding-left: 4%;
+    outline: none;
 }
 
 .uploadForm > div > select {
@@ -74,6 +75,7 @@
     cursor: pointer;
     padding-left: 4%;
     border-radius: 25px;
+    outline: none;
 }
 
 .uploadForm > div > label {
@@ -99,9 +101,14 @@
     border: none;
     color: rgb(146, 146, 146);
     cursor: pointer;
-    border: 3px rgb(43, 43, 43) double;
+    border: 3px rgb(59, 59, 59) double;
+    outline: none;
 }
 
 .submit:hover{
     color: white;
+}
+
+.uploadForm > div > input:focus{
+    border: 0.5px rgb(97, 97, 97) inset;
 }
