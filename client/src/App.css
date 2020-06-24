@@ -10,7 +10,7 @@
 	"navbar navbar mid recommended"
 	"navbar navbar mid recommended"
 	"albumArt albumArt playback playback";
-	overflow: auto;
+	overflow: hidden;
 	background-color: black;
 	color: white;
 }
@@ -67,6 +67,17 @@
 	display: grid;
 }
 
+/* width */
 ::-webkit-scrollbar {
-	width: 1em;
+	width: 17px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	background:rgb(63, 63, 63); 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+	background: #636363; 
   }
