@@ -147,12 +147,12 @@ class Upload extends Component {
                         type='text'
                         value={date}
                         onChange={this.handleDateChange}
-                        placeholder="00-00-00"
+                        placeholder="YYYY-MM-DD"
                         />
                     </div>
                     <div>
                         <label>Genre: </label>
-                        <select value={genre} onChange={this.handleGenreChange} placeholder="Select Genre from Dropdown">
+                        <select value={genre} onChange={this.handleGenreChange}>
                             <option value="select">Select</option>
                             <option value="pop">Pop</option>
                             <option value="classic">Classic</option>

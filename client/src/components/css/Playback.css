@@ -6,7 +6,8 @@
     align-self: center;
     justify-self: center;
     height: 100%;
-    width: 100%
+    width: 100%;
+    
 }
 
 
@@ -73,23 +74,50 @@
     background-color: rgb(24, 24, 24);
     font-family: arial;
     height: 100%;
+    outline: none;
+}
+.rhap_button-clear:hover{
+    color: white;
 }
 
 .rhap_play-pause-button {
-    color:rgb(221, 221, 221);
+    color:rgb(128, 128, 128);
+    outline: none;
 }
 
 .rhap_button-clear {
-    color:rgb(221, 221, 221);
+    color:rgb(128, 128, 128);
+    outline: none;
 }
 
 .rhap_time  {
-    color: rgb(221, 221, 221);
+    color:rgb(128, 128, 128);
     font-size: 0.7rem;
+    outline: none;
 }
 
 .rhap_progress-indicator {
     color: transparent;
     background-color: transparent;
     box-shadow: none;
+    outline: none;
+}
+
+.rhap_volume-indicator {
+    margin-top:6%;
+    height:90%;
+    outline: none;
+    background-color: rgb(46, 46, 46);
+}
+
+.rhap_volume-bar-area {
+    outline: none;
+}
+
+.rhap_progress-container {
+    outline: none;
+}
+
+.rhap_progress-filled {
+    background-color: rgba(31, 31, 31, 0.514);
 }

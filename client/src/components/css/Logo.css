@@ -48,3 +48,8 @@
 	font-weight: 600;
 	margin-left:8%;
 }
+
+.logo0:hover{
+	color: rgb(0, 0, 0);
+	transition: color 3s;
+}
