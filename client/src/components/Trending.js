@@ -21,9 +21,10 @@ class Trending extends Component {
 			 />)
 
 		return(
-			<div className="discover">
-				<h1 className="catagory">Trending</h1>
-				{TrackLi}
+			<div className="mid">
+				<div className="discover">
+					<h1>Coming soon...</h1>
+				</div>
 			</div>
 		)
 	}

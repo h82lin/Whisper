@@ -13,7 +13,7 @@ class Uploads extends Component {
 				<div className="uploads">
                     <h1>Uploads
                         <Link className="upload" to="/Uploads/Upload">
-                            <h2 >+ Upload</h2>
+                            <h2>+ Upload</h2>
 				        </Link>
                     </h1>
                 </div>

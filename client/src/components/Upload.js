@@ -122,12 +122,14 @@ class Upload extends Component {
         return(
 			<div className="mid">
                 <form onSubmit={this.handleSubmit} className="uploadForm">
+                    <div/>
                     <div>
                         <label>Title: </label>
                         <input
                         type='text'
                         value={title}
                         onChange={this.handleTitleChange}
+                        placeholder="d( o_o )b"
                         />
                     </div>
                     <div>
@@ -136,17 +138,8 @@ class Upload extends Component {
                         type='text'
                         value={artist}
                         onChange={this.handleArtistChange}
+                        placeholder="Whisper"
                         />
-                    </div>
-                    <div>
-                        <label>Genre: </label>
-                        <select value={genre} onChange={this.handleGenreChange}>
-                            <option value="select">Select</option>
-                            <option value="pop">Pop</option>
-                            <option value="classic">Classic</option>
-                            <option value="house">House</option>
-                            <option value="trap">Trap</option>
-                        </select>
                     </div>
                     <div>
                         <label>Publish Date: </label>
@@ -154,7 +147,18 @@ class Upload extends Component {
                         type='text'
                         value={date}
                         onChange={this.handleDateChange}
+                        placeholder="00-00-00"
                         />
+                    </div>
+                    <div>
+                        <label>Genre: </label>
+                        <select value={genre} onChange={this.handleGenreChange} placeholder="Select Genre from Dropdown">
+                            <option value="select">Select</option>
+                            <option value="pop">Pop</option>
+                            <option value="classic">Classic</option>
+                            <option value="house">House</option>
+                            <option value="trap">Trap</option>
+                        </select>
                     </div>
                     <div>
                         <label>Music File: </label>
@@ -170,7 +174,7 @@ class Upload extends Component {
                         onChange={this.handleAlbumArtChange}
                         />
                     </div>
-                    <button type="submit">Submit</button>
+                    <button type="submit" className="submit" >Submit</button>
                 </form>
             </div>
 		)

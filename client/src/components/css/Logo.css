@@ -1,21 +1,50 @@
 @import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light");
+.logo{
+	justify-self: center;
+	align-self: center;
+	z-index: 3;
+}
 
-.logo1 {
-	display: flex;
-	align-items: start;
-	justify-content: center;
-	color: white;
-	font-size: 2.5rem;
-	font-weight: 600;
-	font-family: 'Shadows Into Light', cursive;
-	overflow: hidden;
-	min-width: 180px;
-	min-height: 20px;
+.logobox{
+	justify-self: center;
+	align-self: center;
 	height: 100%;
 	width: 100%;
+	display: grid;
+	grid-template-areas:"logo0"
+	"logo1";
+	grid-template-rows: 1fr 1fr;
+}
+
+.logo1 {
+	display: grid;
+	justify-items: center;
+	align-items:center;
+	grid-area: logo1;
+	align-self: center;
+	justify-self: center;
+	color: white;
+	font-size: 2.7rem;
+	font-weight: 600;
+	font-family: 'Shadows Into Light', cursive;
+	width: 100%;
+	margin-top: -17%;
 }
 
 .logo1:hover {
 	color: rgb(0, 0, 0);
 	transition: color 3s;
+}
+
+.logo0 {
+	display: grid;
+	justify-items: start;
+	align-items:start;
+	grid-area: logo0;
+	align-self: start;
+	justify-self: start;
+	color: white;
+	font-size: 0.8rem;
+	font-weight: 600;
+	margin-left:8%;
 }

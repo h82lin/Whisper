@@ -26,12 +26,12 @@ class App extends Component {
   constructor(props) {
 		super(props);
 		this.state = {
-      thisTitle: '3',
-      thisArtist: '3',
-      thisGenre: '3',
+      thisTitle: 'd( o_o )b',
+      thisArtist: 'Whisper',
+      thisGenre: 'Sound',
       thisArt: AlbumArtHolder,
-      thisMusic: '3',
-      thisDate: '3',
+      thisMusic: '',
+      thisDate: '2020-06-24',
 		}
   }
   
@@ -123,8 +123,11 @@ class App extends Component {
             />
             <Route path="/Page2" component={Page2} />
             <Route path="/Trending" component={Trending} />
-            <Route path="/Following" component={Following} />
-            <Route path="/Library" component={Library} />
+            <Route path="/Following" component={Trending} />
+            <Route path="/Library" component={Trending} />
+            <Route path="/History" component={Trending} />
+            <Route path="/Listen Later" component={Trending} />
+            <Route path="/Favourites" component={Trending} />
             <Route path="/Uploads" exact component={Uploads} />
             <Route path="/Uploads/Upload" render={(routeProps) => (<Upload {...routeProps} web3={this.state.web3} accounts={this.state.accounts} contract={this.state.contract} />)}/>
           </Switch>
