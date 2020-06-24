@@ -1,68 +1,55 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Whisper
 
-## Available Scripts
+## Installation Steps
 
-In the project directory, you can run:
+### Step 1
+Clone Whisper from Github
+```bash
+git clone https://github.com/h82lin/Whisper.git
+```
 
-### `yarn start`
+### Step 2
+Download Ganache from:  https://www.trufflesuite.com/ganache
+Setup Ganache
+1. Create new workspace
+2. At workspace tab add 'Whisper/truffle-config.js' into 'Truffle Projects'
+3. Click 'save workspace' at top right
+4. minimize Ganache
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Step 3
+Download Metamask chrome extension from:  https://metamask.io/download.html
+Setup Metamask
+1. Login to Metamask with password, if not create one
+2. At the top add a 'custom RPC' network
+3. At 'New RPC URL' add 'RPC Server' from the Ganache software, it should be:  HTTP://127.0.0.1:7545
+4. Click 'Save'
+5. Open Ganache and click the key symbol, copy 'private key' to clipboard
+5. Open Metamask extension
+6. Click the circle at top right of Metamask, select 'import account'
+7. Paste the key from Ganache
+8. Click 'Import'
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Step 4
+Install Truffle
+```bash
+npm install -g truffle
+```
 
-### `yarn test`
+### Step 5
+Enter Client Folder
+```bash
+cd Whisper/Client
+```
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Step 6
+Install everything from 'Whisper/Client/package.json'
+```bash
+npm install
+```
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### Step 7
+Start the Webpage and it should work perfectly
+```bash
+npm start
+```
