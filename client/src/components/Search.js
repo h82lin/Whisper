@@ -16,6 +16,7 @@ class Search extends Component {
 	}
 
 	render() {
+		let filtered = this.props.contacts;
 		return(
 			<div className="search">
 				<form>

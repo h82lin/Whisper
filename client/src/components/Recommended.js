@@ -20,7 +20,7 @@ class Recommended extends Component {
 
     callbackTitle = (dataFromChild) => {
         this.setState({ thisTitle: dataFromChild }); 
-        this.props.allTitleFromParent(dataFromChild);
+        this.props.callTitleFromParent(dataFromChild);
       }
     callbackArtist = (dataFromChild) => {
         this.setState({ thisArtist: dataFromChild });

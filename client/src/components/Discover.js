@@ -9,12 +9,6 @@ class Discover extends Component {
 			super(props)
 			this.state = {
 				length: 0,
-				//title: '',
-				//artist: '',
-				//genre: '',
-				//date: '',
-				//musicURL:'',
-				//albumArtURL:'',
 				web3: this.props.web3,
 				accounts: this.props.accounts,
 				contract: this.props.contract,
@@ -33,12 +27,6 @@ class Discover extends Component {
 		this.setState({length: await contract.methods.getLength().call({ from: accounts[0] })})
 		var lengthInt = parseInt(this.state.length)
 		this.setState({count: Array.from(Array(lengthInt).keys())})
-		//this.setState({title: await contract.methods.getTitle(0).call({ from: accounts[0] })})
-		//this.setState({artist: await contract.methods.getArtist(0).call({ from: accounts[0] })})
-		//this.setState({genre: await contract.methods.getGenre(0).call({ from: accounts[0] })})
-		//this.setState({date: await contract.methods.getPublishDate(0).call({ from: accounts[0] })})
-		//this.setState({musicURL: await contract.methods.getMusicURL(0).call({ from: accounts[0] })})
-		//this.setState({albumArtURL: await contract.methods.getAlbumArt(0).call({ from: accounts[0] })})
 		}
 	
 	callbackTitle = (dataFromChild) => {
@@ -66,7 +54,7 @@ class Discover extends Component {
 		this.props.callDateFromParent(dataFromChild);
 	}
 	render() {
-		const ListItems = this.state.count.map((number, index) =>
+		const ListItems = this.state.count.map((index) =>
 			<Tracks 
 			key={index}
 			web3={this.state.web3}

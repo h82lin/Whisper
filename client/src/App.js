@@ -104,7 +104,7 @@ class App extends Component {
           musicFromApp={this.state.thisMusic}
           />
           <Recommended 
-          allTitleFromParent={this.allbackTitle}
+          callTitleFromParent={this.callbackTitle}
           callArtistFromParent={this.callbackArtist}
           callArtFromParent={this.callbackArt}
           callMusicFromParent={this.callbackMusic}
