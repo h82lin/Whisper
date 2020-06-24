@@ -1,6 +1,13 @@
+.uploads {
+    height:100%;
+    width:100%;
+    padding-left: 10%;
+}
+
 .upload {
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: rgb(168, 168, 168);
+    text-decoration: none, 
 }
 
 .upload :hover{

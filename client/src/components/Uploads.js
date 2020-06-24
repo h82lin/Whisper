@@ -9,12 +9,14 @@ class Uploads extends Component {
     render() {
         const linkStyle = {color:"transparent"}
         return(
-			<div className="discover">
-				<h1>Uploads
-                    <Link style={linkStyle} to="/Uploads/Upload">
-                        <h2 className="upload">+ Upload</h2>
-				    </Link>
-                </h1>
+			<div className="mid">
+				<div className="uploads">
+                    <h1>Uploads
+                        <Link className="upload" to="/Uploads/Upload">
+                            <h2 >+ Upload</h2>
+				        </Link>
+                    </h1>
+                </div>
 			</div>
 		)
 	}

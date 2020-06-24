@@ -64,6 +64,7 @@
 	height:100%;
 	width:100%;
 	background-color: rgb(17, 17, 17);
+	display: grid;
 }
 
 ::-webkit-scrollbar {
