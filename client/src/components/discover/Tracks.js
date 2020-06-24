@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import play from "../play.png"
-import progBar from "../soundwave.png"
+import progBar from "../waveform.jpg"
 
 import "../css/Tracks.css"
 
